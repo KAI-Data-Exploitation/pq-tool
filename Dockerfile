@@ -10,6 +10,7 @@ RUN mkdir -p /var/log/shiny-server
 
 # Install dependency on xml2
 RUN apt-get update
+RUN apt-get install vim --yes
 RUN apt-get install libxml2-dev --yes
 RUN apt-get install libssl-dev --yes
 RUN apt-get install libpng-dev --yes 
