@@ -37,7 +37,7 @@ library(tm)
 #### PARAMETERS ####
 
 #paste the url for your search set of questions here within the quotation marks
-link = "http://www.parliament.uk/business/publications/written-questions-answers-statements/written-questions-answers/?answered-from=2014-06-04&answered-to=2017-05-05&dept=54&house=commons%2clords&max=1000&page=1&questiontype=AllQuestions&use-dates=True"
+link = "http://www.parliament.uk/business/publications/written-questions-answers-statements/written-questions-answers/?answered-from=2014-06-04&answered-to=2017-05-05&dept=14&house=commons%2clords&max=1000&page=1&questiontype=AllQuestions&use-dates=True"
 
 #write the file name - it will save to whatever folder R is standardly writing out to
 saveFile = 'MoJPQsNew.csv'
@@ -175,7 +175,7 @@ NApageNumVec <- NAs%/%1000 + 1
 for(i in seq_along(NAs)){
   #for each NA question
   #write the URL
-  NAlink = paste0("http://www.parliament.uk/business/publications/written-questions-answers-statements/written-questions-answers/?answered-from=2014-06-04&answered-to=2017-05-05&dept=54&house=commons%2clords&max=1000&page=",
+  NAlink = paste0("http://www.parliament.uk/business/publications/written-questions-answers-statements/written-questions-answers/?answered-from=2014-06-04&answered-to=2017-05-05&dept=14&house=commons%2clords&max=1000&page=",
                     NApageNumVec[i],"&questiontype=AllQuestions&use-dates=True",sep="")
   
   #start an html session
@@ -208,7 +208,7 @@ UUpageNumVec <- UUs%/%1000 + 1
 for(i in seq_along(UUs)){
   #for each NA question
   #write the URL
-  UUlink = paste0("http://www.parliament.uk/business/publications/written-questions-answers-statements/written-questions-answers/?answered-from=2014-06-04&answered-to=2017-05-05&dept=54&house=commons%2clords&max=1000&page=",
+  UUlink = paste0("http://www.parliament.uk/business/publications/written-questions-answers-statements/written-questions-answers/?answered-from=2014-06-04&answered-to=2017-05-05&dept=14&house=commons%2clords&max=1000&page=",
                   UUpageNumVec[i],"&questiontype=AllQuestions&use-dates=True",sep="")
   
   #start an html session
